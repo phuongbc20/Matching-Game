@@ -216,7 +216,7 @@ svg {
 
 .sf-mdl-left,
 .sf-mdl-right {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     z-index: 10;
 }
 
@@ -235,7 +235,7 @@ svg {
 
 .sf-wrap:hover > .sf-mdl-right {
     transform: rotateY(-45deg);
-    background-color: #f0f0f0;
+    background-color: #e6e6e6;
 }
 
 .sf-wrap > .sf-mdl-left-full {
