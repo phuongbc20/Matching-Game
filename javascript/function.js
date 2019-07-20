@@ -60,7 +60,7 @@ function Open(b) {
             blackList.push(input[1]);
             if(blackList.length==16){
     //code here.. Xuất thông báo win gọi hàm refresh game
-    refresh();
+    //refresh();
             }
         }
         setTimeout(function(){input.splice(0, 2);},530);
