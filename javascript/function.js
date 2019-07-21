@@ -86,7 +86,7 @@ function nOk(b) {
 function check(){  
 var i1=(input[0]*100+1).toString();
 var i2=(input[1]*100+1).toString();
-if( document.getElementById(i1).innerHTML== document.getElementById(i2).innerHTML)
+if( document.getElementById(i1).innerHTML== document.getElementById(i2).innerHTML && input[0]!=input[1])
 return true;
 return false;
 }
@@ -115,6 +115,7 @@ function time(){
 function showModal()
 {
     document.getElementById("move").innerHTML=moves;
+    document.getElementById("timee").innerHTML=times+"s";
     $(document).ready(function(){
       // Show the Modal on load
       $("#myModal").modal("show");

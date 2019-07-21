@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
 
-   
     <script src="https://kit.fontawesome.com/646634d675.js"></script>
     <title>Matching Game</title>
 </head>
@@ -52,7 +52,7 @@
                                             Restart
                                         </a>
                                         <div class="mask"></div>
-                                    </div>
+                                </div>
                         </div>
                         <div class="col-3" style="padding: 0px; height:auto; border: 1px solid rgb(255, 255, 255); border-style: solid none none none;">
                             <h2 class="bubbles">Time <span id="time">0s</span></h2>
@@ -505,19 +505,39 @@
                     
         </div>
         <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-            
+            <div class="modal-dialog modal-lg">
             <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                <h4 class="modal-title">Congratulations!</h4>
+            <div class="modal-content" style="border: 0px; border-radius: 0px;">
+                <div class="modal-header justify-content-md-center" style="background-color: hsl(164, 51%, 33%); border-radius: 0px; ">
+                    <div class="h1">
+                        <span>Y</span>
+                        <span>O</span>
+                        <span>U	&nbsp;</span>
+                      
+                        <span>W</span>
+                        <span>I</span>
+                        <span>N</span>
+                      </div>
                 </div>
-                <div class="modal-body">
-                <!-- <p>The <strong>show</strong> method shows the modal and the <strong>hide</strong> method hides the modal.</p> -->
-                <p>Congratulations, you're a winner!!!</p>
-                <p>You made <span id="move"></span> moves</p>
-                <button type="button" class="btn btn-success" id="myBtn" onclick="refresh()">Play again</button>
+                <div class="modal-body justify-content-md-center">
+                        <p class="modal-contents">
+                            <span style="margin-left: 15%;">MOVES</span> 
+                            <span style="margin-right: 15%; float: right; text-align: right;">TIMES</span>
+                        </p>
+                        <p class="modal-contents">
+                                <span id="move" style="margin-left: 20%; "></span> 
+                                <span id="timee" style="margin-right: 18%; float: right; text-align: right;"></span>
+                        </p>
+                
                 </div>
+                <div class="modal-footer " style="margin: 0px; background-color: hsl(164, 51%, 33%); border-radius: 0px;">
+                <div class="button btmodal justify-content-md-center" onclick="refresh()" data-dismiss="modal">
+                    <a href="#" style="color: rgb(255, 196, 0)">
+                        Restart
+                    </a>
+                    <div class="mask"></div>
+                </div>
+            </div>
             </div>
             
             </div>
