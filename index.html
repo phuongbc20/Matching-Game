@@ -57,8 +57,10 @@
                         <div class="col-3" style="padding: 0px; height:auto; border: 1px solid rgb(255, 255, 255); border-style: solid none none none;">
                             <h2 class="bubbles">Time <span id="time">0s</span></h2>
                         </div>
+                </div>
+        </div>
 <!--MAIN------------------------------------------------------------------------------------------>        
-        <div class="container" style="border: 1px solid rgb(255, 255, 255); width: 60%;">
+        <div class="container" style="border: 1px solid rgb(255, 255, 255); width: 45%;">
 
     <!--ROW 1----------------------------------------->
             <div class="row justify-content-md-center"> 
@@ -499,15 +501,32 @@
                         </div>  
                 </div>
             </div>
+            <!-- Modal -->
                     
         </div>
-        
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Congratulations!</h4>
+                </div>
+                <div class="modal-body">
+                <!-- <p>The <strong>show</strong> method shows the modal and the <strong>hide</strong> method hides the modal.</p> -->
+                <p>Congratulations, you're a winner!!!</p>
+                <p>You made <span id="move"></span> moves</p>
+                <button type="button" class="btn btn-success" id="myBtn" onclick="refresh()">Play again</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="javascript/function.js"></script>
-    <script src="https://100dayscss.com/codepen/js/jquery.min.js"></script>
     <script >window.onload=LoadImge;</script>
    
 

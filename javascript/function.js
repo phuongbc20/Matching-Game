@@ -2,17 +2,17 @@
 var arr=["error",'mail',"attach_money",'headset',"collections",'filter_vintage',"flight",'notifications_active',
 "error",'mail',"attach_money",'headset',"collections",'filter_vintage',"flight",'notifications_active'];
 function shuffle(arra1) {
-let ctr = arra1.length;
-let temp;
-let index;
-while (ctr > 0) {
-index = Math.floor(Math.random() * ctr);
-ctr--;
-temp = arra1[ctr];
-arra1[ctr] = arra1[index];
-arra1[index] = temp;
-}
-return arra1;
+    let ctr = arra1.length;
+    let temp;
+    let index;
+    while (ctr > 0) {
+        index = Math.floor(Math.random() * ctr);
+        ctr--;
+        temp = arra1[ctr];
+        arra1[ctr] = arra1[index];
+        arra1[index] = temp;
+    }
+    return arra1;
 }
 //console.log(shuffle(arr));
 // (function LoadImge(){
@@ -25,12 +25,12 @@ return arra1;
 //  })();
 
 function LoadImge(){
-shuffle(arr);
-for(var i=1;i<=16;i++){
-var i1 = (i)*100+1 , i2 = (i)*100+2;
-document.getElementById(i1.toString()).innerHTML = arr[i-1];
-document.getElementById(i2.toString()).innerHTML = arr[i-1];
-}
+    shuffle(arr);
+    for(var i=1;i<=16;i++){
+        var i1 = (i)*100+1 , i2 = (i)*100+2;
+        document.getElementById(i1.toString()).innerHTML = arr[i-1];
+        document.getElementById(i2.toString()).innerHTML = arr[i-1];
+    }
 }
 
 var moves=0;
@@ -56,11 +56,15 @@ function Open(b) {
             setTimeout(function(){Close(input[0]),Close(input[1]);},500);      
         }   
         else{
+            Ok(input[0]);
+            Ok(input[1]);
+            setTimeout(function(){nOk(input[0]),nOk(input[1]);},500);
             blackList.push(input[0]);
-            blackList.push(input[1]);
+            blackList.push(input[1]); 
             if(blackList.length==16){
-    //code here.. Xuất thông báo win gọi hàm refresh game
-    //refresh();
+                //code here.. Xuất thông báo win gọi hàm refresh game
+                showModal();
+                //refresh();
             }
         }
         setTimeout(function(){input.splice(0, 2);},530);
@@ -71,7 +75,14 @@ function Close(b) {
 var element = document.getElementById(b);
 element.classList.remove("active");
 }
-
+function Ok(b) {
+    var element = document.getElementById(b);
+    element.classList.add("ok");
+}
+function nOk(b) {
+    var element = document.getElementById(b);
+    element.classList.remove("ok");
+}
 function check(){  
 var i1=(input[0]*100+1).toString();
 var i2=(input[1]*100+1).toString();
@@ -100,8 +111,20 @@ function time(){
     else
     document.getElementById("time").innerHTML=times+"s";
 }
-
-
+//Show modal
+function showModal()
+{
+    document.getElementById("move").innerHTML=moves;
+    $(document).ready(function(){
+      // Show the Modal on load
+      $("#myModal").modal("show");
+        
+      // Hide the Modal
+      $("#myBtn").click(function(){
+        $("#myModal").modal("hide");
+      });
+    });
+  }
 //Js nút restart
 const body = document.body;
 const btn = document.querySelectorAll('.button')[0];

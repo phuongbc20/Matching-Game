@@ -160,12 +160,18 @@ svg {
 
 .sf-wrap {
         margin: 2%;
-        width: 98%;
-        height: 98%;
+        width: 96%;
+        height: 96%;
         perspective: 1000px;
-        
+        transition-duration: 0.1s;
+        transition-timing-function: ease-out;
 }
-
+.sf-wrap.ok {
+    margin: 0%;
+    width: 105%;
+    height: 105%;
+    transform: rotateY(40deg);
+}
 .sf-mdl-left,
 .sf-mdl-right,
 .sf-mdl-left-full,
