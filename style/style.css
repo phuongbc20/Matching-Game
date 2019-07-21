@@ -175,8 +175,7 @@ svg {
 }
 .sf-wrap.ok {
     margin: 0%;
-    width: 105%;
-    height: 105%;
+    height: 110%;
     transform: rotateY(40deg);
 }
 .sf-mdl-left,
