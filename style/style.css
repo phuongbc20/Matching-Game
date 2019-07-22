@@ -2,7 +2,7 @@
     background: linear-gradient(270deg, hsl(164, 51%, 33%), #449782, #1d955e, #558d73, #4e798f);
     background-size: 1000% 1000%;
     animation: AnimationName 45s ease infinite;
-    padding-bottom: 50px;
+    padding-bottom: 15%;
 }
 
 @keyframes AnimationName { 
