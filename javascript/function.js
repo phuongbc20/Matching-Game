@@ -37,13 +37,16 @@ var moves=0;
 var input=[];
 var blackList=[];// nếu hình nào đã bấm rồi sẽ cho id của hình đó vào arr này 
 var times=0;
+var audio = document.getElementById("myAudio");
+var audio1 = document.getElementById("myAudio1");
+var audio2 = document.getElementById("myAudio2");
+var audio3 = document.getElementById("myAudio3");
 function Open(b) {
-
-
 //Nếu b nằm trong blackList thì không thực hiện tiếp
     if(blackList.includes(b))
     return;
-
+    audio3.autoplay = true;
+    audio3.load();
     input.push(b);
     var element = document.getElementById(b);
     element.classList.add("active");
@@ -53,9 +56,13 @@ function Open(b) {
     if(moves%2==0){//Nếu kiểm tra hai hình không giống nhau thì gọi hàm Close
 
         if(check()==false){
+            audio2.autoplay = true;
+            audio2.load();
             setTimeout(function(){Close(input[0]),Close(input[1]);},500);      
         }   
         else{
+            audio.autoplay = true;
+            audio.load();
             Ok(input[0]);
             Ok(input[1]);
             setTimeout(function(){nOk(input[0]),nOk(input[1]);},500);
@@ -65,6 +72,8 @@ function Open(b) {
                 //code here.. Xuất thông báo win gọi hàm refresh game
                 showModal();
                 //refresh();
+                audio1.autoplay = true;
+                audio1.load();
             }
         }
         setTimeout(function(){input.splice(0, 2);},530);
